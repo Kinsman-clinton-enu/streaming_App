@@ -1,17 +1,19 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import StreamCreate from "./streams/StreamCreate";
 import StreamDelete from "./streams/StreamDelete";
 import StreamEdit from "./streams/StreamEdit";
 import StreamList from "./streams/StreamList";
 import StreamShow from "./streams/StreamShow";
+import Header from "./Header";
  
 
 const App = () => { 
     return (
-    <div>
+    <div className="ui container">
         <BrowserRouter>
+        <Header />
            <div>
-            <h1>Header! </h1>
             <Routes>
             <Route path="/" exact Component={StreamList} />
              <Route path="/streams/show" Component={StreamShow} />
